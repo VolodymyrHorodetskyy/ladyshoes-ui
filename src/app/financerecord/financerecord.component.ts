@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FinancerecordService} from '../service/financerecord.service';
+
 
 @Component({
   selector: 'app-financerecord',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinancerecordComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private financeRecordService: FinancerecordService) {
+  }
 
   ngOnInit() {
   }
+
+  onCreateClick() {
+
+  }
+
 
 }

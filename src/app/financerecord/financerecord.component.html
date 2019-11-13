@@ -1,9 +1,11 @@
-<form class="example-form">
+<form [formGroup]="financeRecordService.form" (submit)="onCreateClick()"  class="example-form"  >
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
+    <input type="text" matInput  placeholder="amount" formControlName="amount">
   </mat-form-field>
-
-  <mat-form-field class="example-full-width">
+<mat-form-field class="example-full-width">
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
+
+ <input type = "submit" value = "submit">
+
 </form>

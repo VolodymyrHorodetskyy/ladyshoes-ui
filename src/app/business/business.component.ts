@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FinancedataService} from '../financedata.service';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {FinancerecordComponent} from '../financerecord/financerecord.component';
+import {FinancerecordService} from '../service/financerecord.service';
 
 export interface Food {
   calories: number;
@@ -29,7 +30,7 @@ export class BusinessComponent implements OnInit {
   displayedColumns: string[] = ['amount', 'model', 'type'];
 
 
-  constructor(private financesData: FinancedataService, private dialog: MatDialog) {
+  constructor(private financesData: FinancedataService, private dialog: MatDialog, private financeRecordService: FinancerecordService) {
   }
 
   ngOnInit() {
@@ -40,6 +41,10 @@ export class BusinessComponent implements OnInit {
   }
 
   onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
     this.dialog.open(FinancerecordComponent);
   }
 
