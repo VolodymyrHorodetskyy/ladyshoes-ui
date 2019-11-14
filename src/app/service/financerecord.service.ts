@@ -7,7 +7,9 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class FinancerecordService {
 
   form: FormGroup = new FormGroup({
-    amount: new FormControl('')
+    amount: new FormControl(''),
+    type: new FormControl(''),
+    reason: new FormControl([])
   });
 
   constructor() {

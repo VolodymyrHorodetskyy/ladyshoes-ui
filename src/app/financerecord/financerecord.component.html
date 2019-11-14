@@ -2,10 +2,22 @@
   <mat-form-field class="example-full-width">
     <input type="text" matInput  placeholder="amount" formControlName="amount">
   </mat-form-field>
-<mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <select (ngModelChange)="onReasonChange()" formControlName="type" matNativeControl required>
+      <option value="INCOME">Income</option>
+      <option value="EXPENSE">Expense</option>
+    </select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Reason</mat-label>
+    <mat-select formControlName="reason" matNativeControl multiple required>
+      <mat-option *ngFor="let reason of this.financeData.reasons" [value]="reason.id">{{reason.reason}}</mat-option>
+    </mat-select>
   </mat-form-field>
 
  <input type = "submit" value = "submit">
 
 </form>
+
+<label name="error">{{result}}</label>
