@@ -1,1 +1,6 @@
-<p>{{data.id}}</p>
+<div *ngIf="financeRecord!=null">
+  <p>Amount : {{financeRecord.amount}}</p>
+  <p>Date : {{financeRecord.date}}</p>
+  <p>Type : {{financeRecord.type}}</p>
+  <button mat-button (click)="onRemoveClick()">Remove</button>
+</div>

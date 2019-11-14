@@ -14,4 +14,13 @@ export class FinancerecordService {
 
   constructor() {
   }
+
+  resetForm(){
+    form = new FormGroup({
+      amount: new FormControl(''),
+      type: new FormControl(''),
+      reason: new FormControl([])
+    });
+  }
+
 }

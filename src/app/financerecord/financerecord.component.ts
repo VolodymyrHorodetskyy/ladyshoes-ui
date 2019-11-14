@@ -27,7 +27,8 @@ export class FinancerecordComponent implements OnInit {
     record.reasonsIds = this.financeRecordService.form.get('reason').value;
     this.financeData.postFinanceRecord(record).subscribe(response => {
         this.financeData.getFinances();
-        this.dialogRef.close('bye');
+        this.dialogRef.close();
+        this.financeRecordService.resetForm();
       },
       error => {
         this.result = error.error.message;

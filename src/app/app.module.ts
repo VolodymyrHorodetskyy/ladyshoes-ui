@@ -8,7 +8,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavComponent} from './nav/nav.component';
 import {BusinessComponent} from './business/business.component';
-import {MatSelectModule, MatTableModule} from '@angular/material';
+import {MatCardModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {FinancerecordComponent} from './financerecord/financerecord.component';
 import {MatDialogModule} from '@angular/material';
@@ -34,7 +34,8 @@ import { FinancerecorddetailsComponent } from './financerecorddetails/financerec
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

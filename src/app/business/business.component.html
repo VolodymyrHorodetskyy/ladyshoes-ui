@@ -2,6 +2,8 @@
   <button mat-raised-button color="primary" (click)="onCreate()">Create</button>
   <p>
   <h3>History</h3>
+  <mat-label style="position: relative;left: 60%;">Current sum: {{financesData.currentSum}}</mat-label>
+
   <table style="left: 10%" mat-table [dataSource]="this.financesData.finances" class="mat-elevation-z8">
     <ng-container matColumnDef="amount">
       <th mat-header-cell *matHeaderCellDef> Amount</th>
@@ -23,4 +25,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row (click)="onRow(row.id)" *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
 </div>
