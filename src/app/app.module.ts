@@ -6,14 +6,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NavComponent} from './nav/nav.component';
-import {BusinessComponent} from './business/business.component';
+import {NavComponent} from './bussinesfunctionality/nav/nav.component';
+import {BusinessComponent} from './bussinesfunctionality/business/business.component';
 import {MatCardModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
-import {FinancerecordComponent} from './financerecord/financerecord.component';
+import {FinancerecordComponent} from './bussinesfunctionality/financerecord/financerecord.component';
 import {MatDialogModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
-import { FinancerecorddetailsComponent } from './financerecorddetails/financerecorddetails.component';
+import { FinancerecorddetailsComponent } from './bussinesfunctionality/financerecorddetails/financerecorddetails.component';
 
 @NgModule({
   declarations: [

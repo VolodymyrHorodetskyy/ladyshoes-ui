@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {BusinessComponent} from './business/business.component';
+import {BusinessComponent} from './bussinesfunctionality/business/business.component';
 
 const routes: Routes = [
   {path: 'business', component: BusinessComponent}
