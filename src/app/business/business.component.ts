@@ -3,6 +3,7 @@ import {FinancedataService} from '../rest/financedata.service';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {FinancerecordComponent} from '../financerecord/financerecord.component';
 import {FinancerecordService} from '../service/financerecord.service';
+import {FinancerecorddetailsComponent} from '../financerecorddetails/financerecorddetails.component';
 
 export interface Food {
   calories: number;
@@ -37,8 +38,10 @@ export class BusinessComponent implements OnInit {
     this.dialog.open(FinancerecordComponent);
   }
 
-  onRow(ob: object) {
-    console.log(ob);
+  onRow(id: number) {
+    const dialogRef = this.dialog.open(FinancerecorddetailsComponent, {
+      data: {id: id}
+    });
   }
 
 }

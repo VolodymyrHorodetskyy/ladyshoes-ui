@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {ModalData} from './modaldata';
 
 @Component({
   selector: 'app-financerecorddetails',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinancerecorddetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<FinancerecorddetailsComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: ModalData) {
+  }
 
   ngOnInit() {
   }

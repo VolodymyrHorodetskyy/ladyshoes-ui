@@ -38,7 +38,7 @@ import { FinancerecorddetailsComponent } from './financerecorddetails/financerec
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [FinancerecordComponent]
+  entryComponents: [FinancerecordComponent, FinancerecorddetailsComponent]
 })
 export class AppModule {
 }

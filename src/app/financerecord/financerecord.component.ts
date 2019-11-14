@@ -1,9 +1,8 @@
-import {Component, ComponentRef, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FinancerecordService} from '../service/financerecord.service';
 import {FinancedataService} from '../rest/financedata.service';
 import {Financerecordrequest} from '../rest/financerecordrequest';
 import {MatDialogRef} from '@angular/material';
-import {BusinessComponent} from '../business/business.component';
 
 
 @Component({
