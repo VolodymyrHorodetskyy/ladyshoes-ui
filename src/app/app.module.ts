@@ -8,12 +8,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavComponent} from './bussinesfunctionality/nav/nav.component';
 import {BusinessComponent} from './bussinesfunctionality/business/business.component';
-import {MatCardModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {MatCardModule, MatGridListModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {FinancerecordComponent} from './bussinesfunctionality/financerecord/financerecord.component';
 import {MatDialogModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import { FinancerecorddetailsComponent } from './bussinesfunctionality/financerecorddetails/financerecorddetails.component';
+import { ShoplistComponent } from './online-shop/shoplist/shoplist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FinancerecorddetailsComponent } from './bussinesfunctionality/financere
     NavComponent,
     BusinessComponent,
     FinancerecordComponent,
-    FinancerecorddetailsComponent
+    FinancerecorddetailsComponent,
+    ShoplistComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { FinancerecorddetailsComponent } from './bussinesfunctionality/financere
     MatDialogModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
