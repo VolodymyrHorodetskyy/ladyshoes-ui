@@ -6,6 +6,7 @@ import {ShoplistComponent} from './online-shop/shoplist/shoplist.component';
 const routes: Routes = [
   {path: 'business', component: BusinessComponent},
   {path: ':lan', component: ShoplistComponent},
+  {path: '', component: ShoplistComponent}
 ];
 
 @NgModule({
