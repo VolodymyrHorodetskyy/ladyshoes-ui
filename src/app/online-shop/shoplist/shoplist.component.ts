@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ItemrestService} from '../rest/itemrest.service';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 
 @Component({
   selector: 'app-shoplist',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoplistComponent implements OnInit {
 
-  constructor() { }
+  language: string;
+
+
+  constructor(public rest: ItemrestService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let lan = params.get('lan');
+      this.language = lan;
+    });
+    this.rest.getImage();
   }
 
 }

@@ -15,6 +15,12 @@ import {MatDialogModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import { FinancerecorddetailsComponent } from './bussinesfunctionality/financerecorddetails/financerecorddetails.component';
 import { ShoplistComponent } from './online-shop/shoplist/shoplist.component';
+import { TestnavComponent } from './testnav/testnav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,8 @@ import { ShoplistComponent } from './online-shop/shoplist/shoplist.component';
     BusinessComponent,
     FinancerecordComponent,
     FinancerecorddetailsComponent,
-    ShoplistComponent
+    ShoplistComponent,
+    TestnavComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,12 @@ import { ShoplistComponent } from './online-shop/shoplist/shoplist.component';
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

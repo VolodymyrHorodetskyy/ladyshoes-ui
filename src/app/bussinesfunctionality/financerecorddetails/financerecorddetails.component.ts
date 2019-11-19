@@ -11,9 +11,9 @@ import {FinancedataService} from '../rest/financedata.service';
 export class FinancerecorddetailsComponent implements OnInit {
 
   financeRecord: object;
-  private data: ModalData;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ModalData, private financeData: FinancedataService, private refDialog: MatDialogRef<FinancerecorddetailsComponent>) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ModalData, private financeData: FinancedataService,
+              private refDialog: MatDialogRef<FinancerecorddetailsComponent>) {
     this.data = data;
   }
 
