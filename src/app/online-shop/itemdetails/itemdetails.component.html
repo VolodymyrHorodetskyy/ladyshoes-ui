@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+<button mat-button style=" float: top" (click)="onBackClick()"><i class="material-icons">keyboard_backspace</i></button>
+
+<mdb-carousel style="float: top;" class="carousel slide carousel-fade" [animation]="'fade'">
+  <mdb-carousel-item>
+    <img class="d-block w-100" src="http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg"
+         alt="First slide">
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img class="d-block w-100" src="http://127.0.0.1:8887/picture_base/test/lexus-is-05.jpg" alt="Second slide">
+  </mdb-carousel-item>
+</mdb-carousel>
+
+<p *ngIf="item!=null"
+   style="font-family: 'Roboto Slab', serif;margin-left: 2%"> {{item.name}} </p>
+
+<p style="font-family: 'Roboto Condensed', sans-serif;color: green; margin-left: 2%">{{inStock}}</p>
+
+<p style=" margin-left: 2%">{{price}}: 1299 ГРН</p>
+
+<mat-tab-group>
+  <mat-tab label="First">
+    <div style="font-size: medium">
+      <p><span><strong>Матеріал</strong>: Натуральна шкіра</span></p>
+      <p><span><strong>Всередині</strong>: хутро (можливий варіант на байці, на осінь)</span></p>
+      <p><img alt="" src="https://images.ua.prom.st/1998741933_1998741933.jpg?PIMAGE_ID=1998741933"
+              style="width: 100%"/></p>
+      <p><span>Чому ми:</span></p>
+      <p>🌷 Шкіра/Замш<br/>
+        🌸 Обмін<br/>
+        🚗 Відправка по всій Україні<br/>
+        🥾 Оптом/роздріб</p>
+      <p><strong>ОПЛАТА</strong></p>
+      <p>Оплатити можна на карту банка або при отриманні, як Вам зручно. При відправці наложеним платежем - передплата
+        100 грн.</p>
+      <p><strong>Як Замовити</strong></p>
+      <p>Заповнюйте форму замовлення на сайті. Після получення ми звяжемось з вами для получення деталей.</p>
+      <p>Або дзвоніть нам по телефону <img style="width: 5%" src="https://cdn4.iconfinder.com/data/icons/communication-and-audio/128/6-512.png">&nbsp;<a href="tel:+380637638967">0637638967</a> або <a href="tel:+380672032212">0672032212</a>.
+        Ми обовязково дамо відповідь на всі ваші запитання.&nbsp;</p>
+      <p>Також можна:</p>
+      <a href="https://m.me/121228155937674">Написати нам в Facebook <img style="width: 5%" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Facebook_Messenger-512.png"></a>
+      <p>
+        <a href="tel:+380637638967">або написати нам у Viber <img style="width: 5%" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/359_Viber_logo-512.png"> по номеру : +380637638967 </a>
+      </p>
+    </div>
+  </mat-tab>
+  <mat-tab label="Second"> Content 2</mat-tab>
+  <mat-tab label="Third"> Content 3</mat-tab>
+</mat-tab-group>
+<div style="float: right">
+  Lady shoes
+  <p></p>
+</div>
+<span style="display: block position: fixed; left: 1%; bottom: 1%;background-color: yellow">
+  <button mat-raised-button color="primary" style="position: fixed; left: 1%; bottom: 1%">{{buy}}</button>
+</span>

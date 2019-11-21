@@ -8,7 +8,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavComponent} from './bussinesfunctionality/nav/nav.component';
 import {BusinessComponent} from './bussinesfunctionality/business/business.component';
-import {MatCardModule, MatGridListModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {MatCardModule, MatDividerModule, MatGridListModule, MatSelectModule, MatTableModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {FinancerecordComponent} from './bussinesfunctionality/financerecord/financerecord.component';
 import {MatDialogModule} from '@angular/material';
@@ -21,6 +21,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { ItemdetailsComponent } from './online-shop/itemdetails/itemdetails.component';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { MatListModule } from '@angular/material/list';
     FinancerecordComponent,
     FinancerecorddetailsComponent,
     ShoplistComponent,
-    TestnavComponent
+    TestnavComponent,
+    ItemdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,10 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    CarouselModule,
+    WavesModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

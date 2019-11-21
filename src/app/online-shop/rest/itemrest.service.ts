@@ -1,21 +1,24 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ConfigurationService} from '../configuration.service';
+import {Item} from './item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemrestService {
 
-  url = 'http://localhost:8080/';
-  public image: object;
+  private url: string = 'http://localhost:8080/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private confServ: ConfigurationService) {
   }
 
-  getImage() {
-    this.http.get(this.url + 'image', {responseType: 'blob'}).subscribe(response => {
-      this.image = 'unsafe:data:image/JPEG;base64,' + response;
-    });
+  public getAllItems() {
+    return this.http.get<Item[]>(this.url + 'item');
+  }
+
+  public getItem(id: number) {
+    return this.http.get<Item>(this.url + 'item/' + id);
   }
 
 }

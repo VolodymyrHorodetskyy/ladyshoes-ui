@@ -2,14 +2,16 @@
 
 <div class="wrapper">
 
-  <div class="card radius shadowDepth1">
+  <div *ngFor="let item of items" class="card radius shadowDepth1">
     <div class="card__image border-tlr-radius">
-      <img  src="http://127.0.0.1:8887/Lakeland_3442-2-400x300.jpg" alt="image" class="border-tlr-radius">
+      <img src="{{this.holdService.picPath }}{{item.images[0].path}}" alt="image" class="border-tlr-radius">
     </div>
     <div class="card__content card__padding">
       <article class="card__article">
-        <a href="#">Взуття взуття взуття<h3>Супер стильне шкіряне взуття</h3></a>
-        <p>     <button mat-raised-button color="primary">Купити</button></p>
+        <a href="#">{{item.name}}<h3>{{item.description}}</h3></a>
+        <p>
+          <button mat-raised-button color="primary" routerLink="detail/{{item.id}}">{{buy}}</button>
+        </p>
       </article>
     </div>
   </div>

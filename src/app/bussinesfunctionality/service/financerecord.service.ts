@@ -16,7 +16,7 @@ export class FinancerecordService {
   }
 
   resetForm(){
-    form = new FormGroup({
+    this.form = new FormGroup({
       amount: new FormControl(''),
       type: new FormControl(''),
       reason: new FormControl([])

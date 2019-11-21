@@ -14,7 +14,8 @@ export class FinancerecordComponent implements OnInit {
 
   result: string;
 
-  constructor(private financeRecordService: FinancerecordService, private financeData: FinancedataService, private dialogRef: MatDialogRef<FinancerecordComponent>) {
+  constructor(private financeRecordService: FinancerecordService, private financeData: FinancedataService,
+              private dialogRef: MatDialogRef<FinancerecordComponent>) {
   }
 
   ngOnInit() {

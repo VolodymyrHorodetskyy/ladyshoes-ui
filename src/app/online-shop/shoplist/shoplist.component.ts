@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ItemrestService} from '../rest/itemrest.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ConfigurationService} from '../configuration.service';
+import {Item} from '../rest/item';
 
 @Component({
   selector: 'app-shoplist',
@@ -10,17 +12,27 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 export class ShoplistComponent implements OnInit {
 
   language: string;
+  buy: string = 'Купити';
+  items: Item[];
 
 
-  constructor(public rest: ItemrestService, private route: ActivatedRoute) {
+  constructor(public rest: ItemrestService, private route: ActivatedRoute, public holdService: ConfigurationService) {
   }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      let lan = params.get('lan');
-      this.language = lan;
+      this.language = params.get('lan');
+      if (this.language === 'ru') {
+        this.buy = 'Купить';
+      }
     });
-    this.rest.getImage();
+    this.initItems();
+  }
+
+  initItems() {
+    this.rest.getAllItems().subscribe(items => {
+      this.items = items;
+    });
   }
 
 }

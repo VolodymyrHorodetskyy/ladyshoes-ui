@@ -53,7 +53,7 @@ export class FinancedataService {
 
   getCurrentSum() {
     return this.http.get(this.url + 'currentSum').subscribe(sum => {
-      this.currentSum = sum;
+      this.currentSum = Number(sum);
     });
   }
 
