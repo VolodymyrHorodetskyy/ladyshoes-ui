@@ -21,8 +21,8 @@ export class ItemdetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    //   this.imagesUrl = [];
     this.route.paramMap.subscribe(param => {
+      this.itemRest.getItemDescriptionText(param.get('lan'));
       this.itemRest.getItem(Number(param.get('id'))).subscribe(i => {
         this.item = i;
         if (param.get('lan') === 'ru') {
