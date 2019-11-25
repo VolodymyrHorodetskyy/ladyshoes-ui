@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ItemrestService} from '../rest/itemrest.service';
 import {Item} from '../rest/item';
 import {Location} from '@angular/common';
+import {BucketService} from '../../testnav/bucket.service';
 
 @Component({
   selector: 'app-itemdetails',
@@ -17,7 +18,8 @@ export class ItemdetailsComponent implements OnInit {
   inStock: string = 'В наявності';
   price: string = 'Ціна';
 
-  constructor(private route: ActivatedRoute, private itemRest: ItemrestService, private _location: Location) {
+  constructor(private route: ActivatedRoute, private itemRest: ItemrestService, private _location: Location,
+              private bucketService: BucketService) {
   }
 
   ngOnInit() {
@@ -36,6 +38,11 @@ export class ItemdetailsComponent implements OnInit {
 
   onBackClick() {
     this._location.back();
+  }
+
+  onBuyClick(item: Item) {
+    console.log(item);
+    this.bucketService.addItem(item);
   }
 
 }

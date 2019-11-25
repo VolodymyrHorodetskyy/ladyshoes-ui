@@ -20,7 +20,7 @@
 
 <p style=" margin-left: 2%">{{price}}: 1299 ГРН</p>
 
-<mat-tab-group mat-stretch-tabs >
+<mat-tab-group mat-stretch-tabs  >
   <mat-tab label="Опис">
     <div style="font-size: medium;margin-left: 1%;">
       <p><span><strong>Матеріал</strong>: Натуральна шкіра</span></p>
@@ -35,6 +35,6 @@
   Lady shoes
   <p></p>
 </div>
-<span style="display: block position: fixed; left: 1%; bottom: 1%;background-color: yellow">
+<span style="display: block; position: fixed; left: 1%; bottom: 1%;background-color: yellow; z-index: 100;" (click)="onBuyClick()">
   <button mat-raised-button color="primary" style="position: fixed; left: 1%; bottom: 1%">{{buy}}</button>
 </span>

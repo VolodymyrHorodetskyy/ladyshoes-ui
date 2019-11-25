@@ -24,7 +24,7 @@ export class ItemrestService {
   }
 
   public getItemDescriptionText(language: string) {
-    this.http.get<string>(this.url + '/text/itemDescription/' + language, {responseType: 'text'}).subscribe(
+    this.http.get(this.url + '/text/itemDescription/' + language, {responseType: 'text'}).subscribe(
       text => {
         this.itemDescription = this.sanitizer.bypassSecurityTrustHtml(text);
       }

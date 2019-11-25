@@ -14,7 +14,7 @@ export class ShoplistComponent implements OnInit {
   language: string;
   buy: string = 'Купити';
   items: Item[];
-
+  moreDetails: string = 'Детальніше';
 
   constructor(public rest: ItemrestService, private route: ActivatedRoute, public holdService: ConfigurationService) {
   }
@@ -24,6 +24,7 @@ export class ShoplistComponent implements OnInit {
       this.language = params.get('lan');
       if (this.language === 'ru') {
         this.buy = 'Купить';
+        this.moreDetails = 'Подробнее';
       }
     });
     this.initItems();

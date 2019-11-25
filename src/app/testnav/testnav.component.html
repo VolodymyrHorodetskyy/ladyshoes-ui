@@ -3,7 +3,7 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu {{language}}</mat-toolbar>
+    <mat-toolbar>Lady Shoes</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/">Головна</a>
       <a mat-list-item routerLink="/business">Бізнес</a>
@@ -21,6 +21,10 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>ng7</span>
+      <div style="position: absolute; right: 3%" (click)="onBucketClick()">
+        <i class="fa" style="font-size:24px">&#xf07a;</i>
+        <span class='badge badge-warning' id='lblCartCount'> {{bucketService.items.length}} </span>
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

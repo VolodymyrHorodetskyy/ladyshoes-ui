@@ -24,6 +24,7 @@ import { MatListModule } from '@angular/material/list';
 import { ItemdetailsComponent } from './online-shop/itemdetails/itemdetails.component';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import {MatTabsModule} from '@angular/material/tabs';
+import { ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     FinancerecorddetailsComponent,
     ShoplistComponent,
     TestnavComponent,
-    ItemdetailsComponent
+    ItemdetailsComponent,
+    ShoppingcartComponent
   ],
   imports: [
     BrowserModule,
