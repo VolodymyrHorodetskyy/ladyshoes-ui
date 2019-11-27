@@ -22,6 +22,7 @@ export class ShoplistComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.language = params.get('lan');
+      this.holdService.language = this.language;
       if (this.language === 'ru') {
         this.buy = 'Купить';
         this.moreDetails = 'Подробнее';

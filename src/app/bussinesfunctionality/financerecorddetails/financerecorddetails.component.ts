@@ -2,6 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {ModalData} from './modaldata';
 import {FinancedataService} from '../rest/financedata.service';
+import {Financerecord} from './financerecord';
 
 @Component({
   selector: 'app-financerecorddetails',
@@ -10,7 +11,7 @@ import {FinancedataService} from '../rest/financedata.service';
 })
 export class FinancerecorddetailsComponent implements OnInit {
 
-  financeRecord: object;
+  financeRecord: Financerecord;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: ModalData, private financeData: FinancedataService,
               private refDialog: MatDialogRef<FinancerecorddetailsComponent>) {

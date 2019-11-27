@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Financerecordrequest} from './financerecordrequest';
-import {error} from 'util';
-import {FinancerecordComponent} from '../financerecord/financerecord.component';
+import {Financerecord} from '../financerecorddetails/financerecord';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +43,7 @@ export class FinancedataService {
   }
 
   getFinanceRecord(id: number) {
-    return this.http.get(this.url + id);
+    return this.http.get<Financerecord>(this.url + id);
   }
 
   removeFinanceRecord(id: number) {

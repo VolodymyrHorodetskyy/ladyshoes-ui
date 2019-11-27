@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: '', component: ShoplistComponent},
   {path: 'detail/:id', component: ItemdetailsComponent},
   {path: ':lan/detail/:id', component: ItemdetailsComponent},
-  {path: 'shoppingcart', component: ShoppingcartComponent}
+  {path: 'items/shoppingcart', component: ShoppingcartComponent}
+
 ];
 
 @NgModule({

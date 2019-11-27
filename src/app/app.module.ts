@@ -8,7 +8,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavComponent} from './bussinesfunctionality/nav/nav.component';
 import {BusinessComponent} from './bussinesfunctionality/business/business.component';
-import {MatCardModule, MatDividerModule, MatGridListModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {
+  MatBadgeModule,
+  MatCardModule,
+  MatGridListModule,
+  MatSelectModule,
+  MatSnackBarModule,
+  MatTableModule
+} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {FinancerecordComponent} from './bussinesfunctionality/financerecord/financerecord.component';
 import {MatDialogModule} from '@angular/material';
@@ -24,7 +31,7 @@ import { MatListModule } from '@angular/material/list';
 import { ItemdetailsComponent } from './online-shop/itemdetails/itemdetails.component';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import {MatTabsModule} from '@angular/material/tabs';
-import { ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.component';
+import {ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.component';
 
 
 @NgModule({
@@ -60,7 +67,9 @@ import { ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.c
     MatListModule,
     CarouselModule,
     WavesModule,
-    MatTabsModule
+    MatTabsModule,
+    MatBadgeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

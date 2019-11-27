@@ -1,1 +1,11 @@
 <p>shoppingcart works!</p>
+<mat-list>
+  <mat-list-item *ngFor="let item of bucket.items">
+    <img matListAvatar src="http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg" alt="...">
+    <h3 matLine> {{item.name}} </h3>
+    <p matLine>
+      <span> Ще щось </span>
+      <span class="demo-2">  {{item.description}} </span>
+    </p>
+  </mat-list-item>
+</mat-list>
