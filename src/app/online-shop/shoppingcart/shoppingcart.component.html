@@ -1,11 +1,14 @@
-<p>shoppingcart works!</p>
+<p align="center">{{text}}</p>
 <mat-list>
   <mat-list-item *ngFor="let item of bucket.items">
-    <img matListAvatar src="http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg" alt="...">
+    <img matListAvatar src="http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg">
     <h3 matLine> {{item.name}} </h3>
     <p matLine>
       <span> Ще щось </span>
       <span class="demo-2">  {{item.description}} </span>
     </p>
+    <i (click)="onRemoveClick(item)" class="material-icons">
+      cancel
+    </i>
   </mat-list-item>
 </mat-list>

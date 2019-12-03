@@ -10,7 +10,9 @@
       <article class="card__article">
         <a href="#">{{item.name}}<h3>{{item.description}}</h3></a>
         <p>
-          <button mat-raised-button style="background-color: #B71C1C" routerLink="detail/{{item.id}}">{{moreDetails}}</button>
+          <button mat-raised-button style="background-color: #B71C1C"
+                  routerLink="detail/{{item.id}}">{{moreDetails}}</button>
+          <button mat-raised-button style="background-color: yellow" (click)="onBuyClick(item)">{{buy}}</button>
         </p>
       </article>
     </div>

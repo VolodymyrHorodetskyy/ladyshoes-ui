@@ -3,6 +3,7 @@ import {ItemrestService} from '../rest/itemrest.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {ConfigurationService} from '../configuration.service';
 import {Item} from '../rest/item';
+import {BucketService} from '../../testnav/bucket.service';
 
 @Component({
   selector: 'app-shoplist',
@@ -16,7 +17,7 @@ export class ShoplistComponent implements OnInit {
   items: Item[];
   moreDetails: string = 'Детальніше';
 
-  constructor(public rest: ItemrestService, private route: ActivatedRoute, public holdService: ConfigurationService) {
+  constructor(public rest: ItemrestService, private route: ActivatedRoute, public holdService: ConfigurationService, private bucket: BucketService) {
   }
 
   ngOnInit() {
@@ -35,6 +36,10 @@ export class ShoplistComponent implements OnInit {
     this.rest.getAllItems().subscribe(items => {
       this.items = items;
     });
+  }
+
+  onBuyClick(item: Item) {
+    this.bucket.addItem(item);
   }
 
 }
