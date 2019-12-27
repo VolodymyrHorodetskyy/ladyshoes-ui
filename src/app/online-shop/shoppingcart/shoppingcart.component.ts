@@ -11,7 +11,7 @@ export class ShoppingcartComponent implements OnInit {
 
   text: string;
 
-  constructor(private bucket: BucketService) {
+  constructor(public bucket: BucketService) {
   }
 
   ngOnInit() {

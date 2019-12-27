@@ -13,12 +13,11 @@ import {BucketService} from '../../testnav/bucket.service';
 export class ItemdetailsComponent implements OnInit {
 
   item: Item;
-  imagesUrl = ['http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg', 'http://127.0.0.1:8887/picture_base/test/lexus-is-05.jpg'];
   buy: string = 'Купити';
   inStock: string = 'В наявності';
   price: string = 'Ціна';
 
-  constructor(private route: ActivatedRoute, private itemRest: ItemrestService, private _location: Location,
+  constructor(private route: ActivatedRoute, public itemRest: ItemrestService, private _location: Location,
               private bucketService: BucketService) {
   }
 

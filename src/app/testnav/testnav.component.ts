@@ -25,7 +25,7 @@ export class TestnavComponent implements OnInit {
   }
 
   constructor(private breakpointObserver: BreakpointObserver, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,
-              private snackBar: MatSnackBar, private bucket: BucketService, private router: Router) {
+              private snackBar: MatSnackBar, public bucket: BucketService, private router: Router) {
     iconRegistry.addSvgIcon(
       'thumbs-up',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));

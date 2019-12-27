@@ -20,11 +20,10 @@ export interface Food {
 })
 export class BusinessComponent implements OnInit {
 
-  finances: Object;
   displayedColumns: string[] = ['amount', 'reasons', 'type'];
 
 
-  constructor(private financesData: FinancedataService, private dialog: MatDialog, private financeRecordService: FinancerecordService) {
+  constructor(public financesData: FinancedataService, private dialog: MatDialog, private financeRecordService: FinancerecordService) {
   }
 
   ngOnInit() {
