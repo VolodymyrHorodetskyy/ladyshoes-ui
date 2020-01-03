@@ -4,6 +4,7 @@ import {ItemrestService} from '../rest/itemrest.service';
 import {Item} from '../rest/item';
 import {Location} from '@angular/common';
 import {BucketService} from '../../testnav/bucket.service';
+import {ConfigurationService} from '../configuration.service';
 
 @Component({
   selector: 'app-itemdetails',
@@ -18,7 +19,7 @@ export class ItemdetailsComponent implements OnInit {
   price: string = 'Ціна';
 
   constructor(private route: ActivatedRoute, public itemRest: ItemrestService, private _location: Location,
-              private bucketService: BucketService) {
+              private bucketService: BucketService, private configurationService: ConfigurationService) {
   }
 
   ngOnInit() {

@@ -6,6 +6,10 @@ export class Item {
   name: string;
   description: string;
   images: Image[];
+  price: number;
+  newPrice: number;
+  discountNumberOfDays: number;
+  material: string;
 
 
 }

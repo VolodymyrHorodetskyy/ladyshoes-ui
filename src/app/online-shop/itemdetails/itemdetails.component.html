@@ -2,25 +2,22 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
 <button mat-button style=" float: top" (click)="onBackClick()"><i class="material-icons">keyboard_backspace</i></button>
-
-<mdb-carousel style="float: top;" class="carousel slide carousel-fade" [animation]="'fade'">
-  <mdb-carousel-item>
-    <img class="d-block w-100" src="http://127.0.0.1:8887/picture_base/test/Lakeland_3442-2-400x300.jpg"
-         alt="First slide">
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img class="d-block w-100" src="http://127.0.0.1:8887/picture_base/test/lexus-is-05.jpg" alt="Second slide">
-  </mdb-carousel-item>
-</mdb-carousel>
-
+<div *ngIf="item!=null">
+  <mdb-carousel style="float: top;" class="carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item *ngFor="let image of item.images">
+      <img class="d-block w-100" src="{{configurationService.picPath}}{{image.path}}"
+           alt="First slide">
+    </mdb-carousel-item>
+  </mdb-carousel>
+</div>
 <p *ngIf="item!=null"
    style="font-family: 'Roboto Slab', serif;margin-left: 2%"> {{item.name}} </p>
 
 <p style="font-family: 'Roboto Condensed', sans-serif;color: green; margin-left: 2%">{{inStock}}</p>
 
-<p style=" margin-left: 2%">{{price}}: 1299 ГРН</p>
+<p style=" margin-left: 2%">{{price}}: {{item.price}}</p>
 
-<mat-tab-group mat-stretch-tabs  >
+<mat-tab-group mat-stretch-tabs>
   <mat-tab label="Опис">
     <div style="font-size: medium;margin-left: 1%;">
       <p><span><strong>Матеріал</strong>: Натуральна шкіра</span></p>
@@ -35,6 +32,7 @@
   Lady shoes
   <p></p>
 </div>
-<span style="display: block; position: fixed; left: 1%; bottom: 1%;background-color: yellow; z-index: 100;" (click)="onBuyClick(item)">
+<span style="display: block; position: fixed; left: 1%; bottom: 1%;background-color: yellow; z-index: 100;"
+      (click)="onBuyClick(item)">
   <button mat-raised-button color="primary" style="position: fixed; left: 1%; bottom: 1%">{{buy}}</button>
 </span>

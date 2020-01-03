@@ -1,14 +1,21 @@
 <p>shoplist works! {{language}}</p>
 
 <div class="wrapper">
-
   <div *ngFor="let item of items" class="card radius shadowDepth1">
     <div class="card__image border-tlr-radius">
-      <img src="{{this.holdService.picPath }}{{item.images[0].path}}" alt="image" class="border-tlr-radius">
+      <img src="{{this.configurationService.picPath }}{{item.images[0].path}}" alt="image" class="border-tlr-radius">
     </div>
     <div class="card__content card__padding">
       <article class="card__article">
-        <a href="#">{{item.name}}<h3>{{item.description}}</h3></a>
+        <div *ngIf="item.discountNumberOfDays > 0; else other_content" style="float: right;">
+          <h5 style="text-decoration: line-through;">{{item.price}} грн</h5>
+          <h4 style="float: top;"><b>{{item.newPrice}} грн</b></h4>
+        </div>
+        <ng-template #other_content><h5 style="float: right;">{{item.price}} грн</h5></ng-template>
+        <a href="#" routerLink="detail/{{item.id}}">{{item.name}}</a>
+          <div *ngIf="item.material == 'LEATHER'; then leather else suede"></div>
+          <ng-template #leather><h4>Шкіра</h4></ng-template>
+        <ng-template #suede><h4>Замш</h4></ng-template>
         <p>
           <button mat-raised-button style="background-color: #B71C1C"
                   routerLink="detail/{{item.id}}">{{moreDetails}}</button>
