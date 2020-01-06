@@ -32,6 +32,7 @@ import { ItemdetailsComponent } from './online-shop/itemdetails/itemdetails.comp
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import {MatTabsModule} from '@angular/material/tabs';
 import {ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import {ShoppingcartComponent } from './online-shop/shoppingcart/shoppingcart.co
     WavesModule,
     MatTabsModule,
     MatBadgeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {ConfigurationService} from '../configuration.service';
 import {Item} from './item';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {GetAllItemsResponse} from './GetAllItemsResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class ItemrestService {
   constructor(private http: HttpClient, private confServ: ConfigurationService, private sanitizer: DomSanitizer) {
   }
 
-  public getAllItems() {
-    return this.http.get<Item[]>(this.url + 'item');
+  public getAllItems(page: number = 0) {
+    return this.http.get<GetAllItemsResponse>(this.url + 'item?page=' + page + '&size=1');
   }
 
   public getItem(id: number) {

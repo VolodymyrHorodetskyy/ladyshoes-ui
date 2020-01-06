@@ -1,5 +1,6 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
+
 /*
 *  Basic Reset
 */
@@ -11,12 +12,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /**
  * Basics Styles
  */
 html {
   font-size: 62.5%;
 }
+
 body {
   background-color: #eee;
   font-family: Roboto;
@@ -30,6 +33,7 @@ a {
   text-decoration: none;
   color: #3498db;
 }
+
 a:hover {
   color: #2980b9;
 }
@@ -41,7 +45,7 @@ h2 {
 
 .wrapper {
   max-width: 400px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -54,18 +58,26 @@ h2 {
   border-top-right-radius: 2px;
 }
 
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
 
-.radius { border-radius: 2px; }
+.radius {
+  border-radius: 2px;
+}
 
-.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+.padding-tb {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
 
-.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+.shadowDepth0 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
 
 .shadowDepth1 {
-  box-shadow:
-    0 1px 3px rgba(0,0,0, 0.12),
-    0 1px 2px rgba(0,0,0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -86,6 +98,7 @@ h2 {
   min-height: 100px;
   background-color: #eee;
 }
+
 .card__image img {
   width: 100%;
   max-width: 100%;

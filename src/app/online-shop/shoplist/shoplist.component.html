@@ -1,5 +1,13 @@
 <p>shoplist works! {{language}}</p>
 
+<mat-form-field style="margin-left: 1%">
+  <mat-label>Favorite car</mat-label>
+  <select matNativeControl [(ngModel)]="selectedCar" name="car">
+    <option value="" selected></option>
+<option>one
+    </option>
+  </select>
+</mat-form-field>
 <div class="wrapper">
   <div *ngFor="let item of items" class="card radius shadowDepth1">
     <div class="card__image border-tlr-radius">
@@ -13,15 +21,22 @@
         </div>
         <ng-template #other_content><h5 style="float: right;">{{item.price}} грн</h5></ng-template>
         <a href="#" routerLink="detail/{{item.id}}">{{item.name}}</a>
-          <div *ngIf="item.material == 'LEATHER'; then leather else suede"></div>
-          <ng-template #leather><h4>Шкіра</h4></ng-template>
-        <ng-template #suede><h4>Замш</h4></ng-template>
+        <div *ngIf="item.material == 'LEATHER'; then leather else suede"></div>
+        <ng-template #leather><h6>Матеріал: Шкіра</h6></ng-template>
+        <ng-template #suede><h6>Замш</h6></ng-template>
         <p>
           <button mat-raised-button style="background-color: #B71C1C"
                   routerLink="detail/{{item.id}}">{{moreDetails}}</button>
           <button mat-raised-button style="background-color: yellow" (click)="onBuyClick(item)">{{buy}}</button>
         </p>
+
       </article>
     </div>
   </div>
 </div>
+<mat-paginator [length]="amount"
+               [pageSize]="1"
+               [hidePageSize]="true"
+               (page)="getAllItems($event)"
+>
+</mat-paginator>
